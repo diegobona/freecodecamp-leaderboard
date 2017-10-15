@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/autumnchris/freecodecamp-leaderboard/issues"
   },
-  "homepage": "https://github.com/autumnchris/freecodecamp-leaderboard#readme"
+  "homepage": "https://github.com/autumnchris/freecodecamp-leaderboard#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
+  }
 }
