@@ -1,0 +1,19 @@
+{
+  "name": "freecodecamp-leaderboard",
+  "version": "1.0.0",
+  "description": "My Build a Camper Leaderboard project for the Data Visualization Certification on Free Code Camp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autumnchris/freecodecamp-leaderboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autumnchris/freecodecamp-leaderboard/issues"
+  },
+  "homepage": "https://github.com/autumnchris/freecodecamp-leaderboard#readme"
+}
