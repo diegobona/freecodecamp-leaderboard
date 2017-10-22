@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/autumnchris/freecodecamp-leaderboard/issues"
   },
-  "homepage": "https://github.com/autumnchris/freecodecamp-leaderboard#readme",
+  "homepage": "https://autumnchris.github.io/freecodecamp-leaderboard",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
