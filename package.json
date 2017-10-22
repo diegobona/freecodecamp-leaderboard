@@ -4,6 +4,8 @@
   "description": "My Build a Camper Leaderboard project for the Data Visualization Certification on Free Code Camp.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack -p",
+    "deploy": "npm run build && gh-pages -d build",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
