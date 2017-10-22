@@ -20,6 +20,13 @@ module.exports = {
         }
       },
       {
+        test: /\.(jpg|png|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        }
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           use:['css-loader', 'sass-loader'],
@@ -29,7 +36,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new ExtractTextPlugin({ filename: 'style.css', allChunks: true })
