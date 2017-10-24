@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-const logo = require('.././images/freecodecamp-logo.png');
+const freeCodeCampLogo = require('.././images/freecodecamp-logo.png');
 
 export default class App extends Component {
 
@@ -8,7 +9,9 @@ export default class App extends Component {
     return (
       <div className="container-fluid">
         <header className="text-center">
-          <h1><img src={logo} alt="freeCodeCamp" /></h1>
+          <h1>
+            <img src={freeCodeCampLogo} alt="freeCodeCamp" />
+          </h1>
           <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
         </header>
         <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
