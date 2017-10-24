@@ -5,6 +5,15 @@ const freeCodeCampLogo = require('.././images/freecodecamp-logo.png');
 
 export default class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      thirtyDays: [],
+      allTime: [],
+      currentView: 'thirtyDays'
+    };
+  }
+
   render() {
     return (
       <div className="container-fluid">
