@@ -14,6 +14,24 @@ export default class App extends Component {
     };
   }
 
+  componentWillMount() {
+    axios.all([this.fetchThirtyDays(), this.fetchAllTime()])
+      .then(axios.spread((thirtyDays, allTime) => {
+        this.setState({
+          thirtyDays: thirtyDays.data,
+          allTime: allTime.data
+        });
+      }));
+  }
+
+  fetchThirtyDays() {
+    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent');
+  }
+
+  fetchAllTime() {
+    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime');
+  }
+
   render() {
     return (
       <div className="container-fluid">
