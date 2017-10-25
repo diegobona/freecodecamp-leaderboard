@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import LeaderboardList from './leaderboard-list';
 import axios from 'axios';
+import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 const freeCodeCampLogo = require('.././images/freecodecamp-logo.png');
 
@@ -16,6 +16,14 @@ export default class App extends Component {
     };
   }
 
+  fetchThirtyDays() {
+    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent');
+  }
+
+  fetchAllTime() {
+    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime');
+  }
+
   componentWillMount() {
     axios.all([this.fetchThirtyDays(), this.fetchAllTime()])
       .then(axios.spread((thirtyDays, allTime) => {
@@ -26,12 +34,8 @@ export default class App extends Component {
       }));
   }
 
-  fetchThirtyDays() {
-    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent');
-  }
-
-  fetchAllTime() {
-    return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime');
+  changeView(currentView) {
+    this.setState({ currentView });
   }
 
   render() {
@@ -45,6 +49,10 @@ export default class App extends Component {
         </header>
         <main>
           <div className="well">
+            <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+              <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
+              <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
+            </ToggleButtonGroup>
             <LeaderboardList campers={this.state[this.state.currentView]} />
           </div>
         </main>
