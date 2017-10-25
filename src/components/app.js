@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LeaderboardList from './leaderboard-list';
 import axios from 'axios';
 
 const freeCodeCampLogo = require('.././images/freecodecamp-logo.png');
