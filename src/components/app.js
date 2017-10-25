@@ -42,6 +42,11 @@ export default class App extends Component {
           </h1>
           <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
         </header>
+        <main>
+          <div className="well">
+            <LeaderboardList campers={this.state[this.state.currentView]} />
+          </div>
+        </main>
         <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
