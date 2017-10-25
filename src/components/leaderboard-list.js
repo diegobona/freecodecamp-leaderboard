@@ -3,6 +3,10 @@ import ListItem from './list-item';
 
 const LeaderboardList = ({ campers }) => {
 
+  const ListItems = campers.map((camper, index) => {
+    return <ListItem key={index} camper={camper} rank={index + 1} />;
+  });
+
   return (
     <table className="table">
       <thead>
@@ -13,7 +17,7 @@ const LeaderboardList = ({ campers }) => {
           <th>All Time</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>{ListItems}</tbody>
     </table>
   );
 }
