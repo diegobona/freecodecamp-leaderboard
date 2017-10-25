@@ -48,11 +48,13 @@ export default class App extends Component {
           <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
         </header>
         <main>
-          <div className="well">
-            <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-              <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
-              <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
-            </ToggleButtonGroup>
+          <div className="well center-block">
+            <form>
+              <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
+                <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
+              </ToggleButtonGroup>
+            </form>
             <LeaderboardList campers={this.state[this.state.currentView]} />
           </div>
         </main>
