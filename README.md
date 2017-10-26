@@ -14,6 +14,7 @@ My Build a Camper Leaderboard project for the Data Visualization Certification o
 * [axios](https://github.com/axios/axios)
 * [React-Bootstrap](https://react-bootstrap.github.io)
 * [Font Awesome](http://fontawesome.io)
+* [Google Fonts](https://fonts.google.com)
 
 ## Demo
 
