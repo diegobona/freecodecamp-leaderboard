@@ -50,10 +50,13 @@ export default class App extends Component {
         <main>
           <div className="well center-block">
             <form>
-              <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-                <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
-                <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
-              </ToggleButtonGroup>
+              <fieldset>
+                <legend aria-label="Show top 100 campers for"></legend>
+                <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                  <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
+                  <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
+                </ToggleButtonGroup>
+              </fieldset>
             </form>
             <LeaderboardList campers={this.state[this.state.currentView]} />
           </div>

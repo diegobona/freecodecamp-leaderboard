@@ -50,6 +50,10 @@ html {
       margin-top: 20px;
       max-width: 900px;
       padding: 10px;
+      legend {
+        border: none !important;
+        margin: 0;
+      }
       .btn-group {
         float: right;
         margin-bottom: 15px;
@@ -77,6 +81,7 @@ html {
       }
       .table {
         border: none;
+        color: $black;
         margin-bottom: 0;
         thead {
           background-color: $dark-green;
