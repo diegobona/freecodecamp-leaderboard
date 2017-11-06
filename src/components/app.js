@@ -40,11 +40,11 @@ export default class App extends Component {
 
   render() {
 
-    if (!this.state.thirtyDays.length && !this.state. allTime.length) {
+    if (!this.state.thirtyDays.length && !this.state.allTime.length) {
 
       return (
         <div className="text-center" id="spinner">
-          <span className="fa fa-refresh fa-spin fa-5x fa-fw"></span>
+          <span className="fa fa-refresh fa-spin fa-fw"></span>
           <span className="sr-only">Loading...</span>
         </div>
       );
