@@ -1,7 +1,8 @@
 # Free Code Camp Leaderboard
 
-My Build a Camper Leaderboard project for the Data Visualization Certification on [Free Code Camp](https://www.freecodecamp.org).
+My project for the [Build a Camper Leaderboard challenge](https://www.freecodecamp.org/challenges/build-a-camper-leaderboard) as part of the curriculum for the Data Visualization Certification on [Free Code Camp](https://www.freecodecamp.org).
 
+---
 
 ## Built With
 * [React](https://reactjs.org)
