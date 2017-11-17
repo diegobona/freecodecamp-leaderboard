@@ -6,7 +6,7 @@ My project for the [Build a Camper Leaderboard challenge](https://www.freecodeca
 
 ## Built With
 * [React](https://reactjs.org)
-* [webpack](https://webpack.js.org)
+* [Webpack](https://webpack.js.org)
 * SCSS
 * [Babel](https://babeljs.io)
 * [Bootstrap 3 CSS](https://getbootstrap.com/docs/3.3/css)
