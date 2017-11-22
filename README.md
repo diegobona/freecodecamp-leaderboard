@@ -25,7 +25,7 @@ View project [here](https://autumnchris.github.io/freecodecamp-leaderboard).
 
 ```
 git clone https://github.com/autumnchris/freecodecamp-leaderboard.git
-cd dashboard
+cd freecodecamp-leaderboard
 npm install
 npm start
 ```
