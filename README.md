@@ -4,14 +4,17 @@ My project for the [Build a Camper Leaderboard challenge](https://www.freecodeca
 
 ---
 
+## User Stories
+1. I can see a table of the freeCodeCamp campers who've earned the most brownie points in the past 30 days.
+2. I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
+3. I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
+
 ## Built With
 * [React](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
-* SCSS
+* Sass
 * [Babel](https://babeljs.io)
-* [Bootstrap 3 CSS](https://getbootstrap.com/docs/3.3/css)
-
-## Other Tools Used
+* [Bootstrap](https://getbootstrap.com)
 * [axios](https://github.com/axios/axios)
 * [React-Bootstrap](https://react-bootstrap.github.io)
 * [Font Awesome](http://fontawesome.io)
@@ -30,4 +33,4 @@ npm install
 npm start
 ```
 
-Go to [http://localhost:8080](http://localhost:8080)
+Go to [http://localhost:8080](http://localhost:8080).
