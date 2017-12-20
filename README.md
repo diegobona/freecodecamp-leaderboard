@@ -22,7 +22,7 @@ My project for the [Build a Camper Leaderboard challenge](https://www.freecodeca
 
 ## Demo
 
-View project [here](https://autumnchris.github.io/freecodecamp-leaderboard).
+View project demo at [https://autumnchris.github.io/freecodecamp-leaderboard](https://autumnchris.github.io/freecodecamp-leaderboard).
 
 ## Installation
 
@@ -33,4 +33,4 @@ npm install
 npm start
 ```
 
-Go to [http://localhost:8080](http://localhost:8080).
+Go to `http://localhost:8080`.
