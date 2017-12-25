@@ -12,7 +12,7 @@ My project for the [Build a Camper Leaderboard challenge](https://www.freecodeca
 ## Built With
 * [React](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
-* Sass
+* [Sass](http://sass-lang.com)
 * [Babel](https://babeljs.io)
 * [Bootstrap](https://getbootstrap.com)
 * [axios](https://github.com/axios/axios)
