@@ -4,11 +4,6 @@ $white: #fff;
 $grey: #e0e0e0;
 $desktop-view: 460px;
 
-#spinner {
-  font-size: 4.5rem;
-  margin-top: 20%;
-}
-
 a,
 a:visited,
 a:hover,
@@ -32,111 +27,122 @@ html {
     @media only screen and (min-width: $desktop-view) {
       font-size: 1.4rem;
     }
-    header {
-      margin: 30px 0 40px;
-      h1 img {
-        width: 24rem;
-        @media only screen and (min-width: $desktop-view) {
-          width: 30rem;
-        }
-      }
-      h2 {
-        font-size: 2rem;
-        @media only screen and (min-width: $desktop-view) {
-          font-size: 2.4rem;
-        }
-      }
-    }
-    .well {
-      background-color: $white;
-      border: none;
-      border-radius: 0;
-      color: $black;
-      margin-top: 20px;
-      max-width: 900px;
-      padding: 10px;
-      legend {
-        border: none !important;
-        margin: 0;
-      }
-      .btn-group {
-        float: right;
-        margin-bottom: 15px;
-        .btn,
-        .btn:active,
-        .btn:focus {
-          background-color: $white;
-          border: 1px solid $dark-green;
-          border-radius: 0;
-          color: $dark-green;
-          font-size: 0.92rem;
-          letter-spacing: 2px;
+    #success {
+      display: none;
+      header {
+        margin: 30px 0 40px;
+        h1 img {
+          width: 24rem;
           @media only screen and (min-width: $desktop-view) {
-            font-size: 1em;
+            width: 30rem;
           }
         }
-        .btn:hover {
-          background-color: $grey;
-          color: $dark-green;
-        }
-        .btn.active {
-          background-color: $dark-green;
-          color: $white;
+        h2 {
+          font-size: 2rem;
+          @media only screen and (min-width: $desktop-view) {
+            font-size: 2.4rem;
+          }
         }
       }
-      .table {
+      .well {
+        background-color: $white;
         border: none;
+        border-radius: 0;
         color: $black;
-        margin-bottom: 0;
-        thead {
-          background-color: $dark-green;
-          color: $white;
-          position: relative;
-          tr th {
-            border: none !important;
-            text-align: center;
-            vertical-align: middle;
+        margin-top: 20px;
+        max-width: 900px;
+        padding: 10px;
+        legend {
+          border: none !important;
+          margin: 0;
+        }
+        .btn-group {
+          float: right;
+          margin-bottom: 15px;
+          .btn,
+          .btn:active,
+          .btn:focus {
+            background-color: $white;
+            border: 1px solid $dark-green;
+            border-radius: 0;
+            color: $dark-green;
+            font-size: 0.92rem;
+            letter-spacing: 2px;
+            @media only screen and (min-width: $desktop-view) {
+              font-size: 1em;
+            }
+          }
+          .btn:hover {
+            background-color: $grey;
+            color: $dark-green;
+          }
+          .btn.active {
+            background-color: $dark-green;
+            color: $white;
           }
         }
-        tbody tr {
-          background-color: $grey;
-          td {
-            text-align: center;
-            vertical-align: middle;
-            img {
-              display: none;
-              border: 1px solid $dark-green;
-              margin-right: 10px;
-              width: 20px;
+        .table {
+          border: none;
+          color: $black;
+          margin-bottom: 0;
+          thead {
+            background-color: $dark-green;
+            color: $white;
+            position: relative;
+            tr th {
+              border: none !important;
+              text-align: center;
+              vertical-align: middle;
+            }
+          }
+          tbody tr {
+            background-color: $grey;
+            td {
+              text-align: center;
+              vertical-align: middle;
+              img {
+                display: none;
+                border: 1px solid $dark-green;
+                margin-right: 10px;
+                width: 20px;
+                @media only screen and (min-width: $desktop-view) {
+                  display: inline-block;
+                  width: 30px;
+                }
+              }
+            }
+            td:nth-child(2) {
               @media only screen and (min-width: $desktop-view) {
-                display: inline-block;
-                width: 30px;
+                text-align: left;
               }
             }
           }
-          td:nth-child(2) {
-            @media only screen and (min-width: $desktop-view) {
-              text-align: left;
-            }
+          tbody tr:nth-child(odd) {
+            background-color: $white;
           }
         }
-        tbody tr:nth-child(odd) {
-          background-color: $white;
-        }
+      }
+      footer {
+        background-color: $grey;
+        bottom: 0;
+        color: $black;
+        font-size: 1.2rem;
+        left: 0;
+        letter-spacing: 2px;
+        margin: 0;
+        padding: 12px 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
       }
     }
-    footer {
-      background-color: $grey;
-      bottom: 0;
-      color: $black;
-      font-size: 1.2rem;
-      left: 0;
-      letter-spacing: 2px;
-      margin: 0;
-      padding: 12px 0;
-      position: absolute;
-      right: 0;
-      width: 100%;
+    #spinner {
+      font-size: 4.5rem;
+      margin-top: 20%;
+    }
+    #error {
+      display: none;
+      margin-top: 20%;
     }
   }
 }

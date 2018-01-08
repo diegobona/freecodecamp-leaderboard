@@ -24,14 +24,19 @@ export default class App extends Component {
     return axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime');
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.all([this.fetchThirtyDays(), this.fetchAllTime()])
       .then(axios.spread((thirtyDays, allTime) => {
         this.setState({
           thirtyDays: thirtyDays.data,
           allTime: allTime.data
         });
-      }));
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+      })).catch((error) => {
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+      });
   }
 
   changeView(currentView) {
@@ -39,40 +44,36 @@ export default class App extends Component {
   }
 
   render() {
-
-    if (!this.state.thirtyDays.length && !this.state.allTime.length) {
-
-      return (
+    return (
+      <div className="container-fluid">
+        <div id="success">
+          <header className="text-center">
+            <h1>
+              <img src={freeCodeCampLogo} alt="freeCodeCamp" />
+            </h1>
+            <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
+          </header>
+          <main>
+            <div className="well center-block">
+              <form>
+                <fieldset>
+                  <legend aria-label="Show top 100 campers for"></legend>
+                  <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                    <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
+                    <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
+                  </ToggleButtonGroup>
+                </fieldset>
+              </form>
+              <LeaderboardList campers={this.state[this.state.currentView]} />
+            </div>
+          </main>
+          <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+        </div>
         <div className="text-center" id="spinner">
           <span className="fa fa-refresh fa-spin fa-fw"></span>
           <span className="sr-only">Loading...</span>
         </div>
-      );
-    }
-
-    return (
-      <div className="container-fluid">
-        <header className="text-center">
-          <h1>
-            <img src={freeCodeCampLogo} alt="freeCodeCamp" />
-          </h1>
-          <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
-        </header>
-        <main>
-          <div className="well center-block">
-            <form>
-              <fieldset>
-                <legend aria-label="Show top 100 campers for"></legend>
-                <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-                  <ToggleButton value={1} onClick={() => this.changeView('thirtyDays')}>30 Days</ToggleButton>
-                  <ToggleButton value={2} onClick={() => this.changeView('allTime')}>All Time</ToggleButton>
-                </ToggleButtonGroup>
-              </fieldset>
-            </form>
-            <LeaderboardList campers={this.state[this.state.currentView]} />
-          </div>
-        </main>
-        <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+        <div className="alert alert-warning text-center" id="error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
       </div>
     );
   }
