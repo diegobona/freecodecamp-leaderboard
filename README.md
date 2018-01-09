@@ -27,10 +27,10 @@ View project demo at [https://autumnchris.github.io/freecodecamp-leaderboard](ht
 ## Installation
 
 ```
-git clone https://github.com/autumnchris/freecodecamp-leaderboard.git
-cd freecodecamp-leaderboard
-npm install
-npm start
+$ git clone https://github.com/autumnchris/freecodecamp-leaderboard.git
+$ cd freecodecamp-leaderboard
+$ npm install
+$ npm start
 ```
 
 Go to `http://localhost:8080`.
