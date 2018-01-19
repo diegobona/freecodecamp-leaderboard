@@ -2,6 +2,7 @@ $dark-green: #006400;
 $black: #2a2a2a;
 $white: #fff;
 $grey: #e0e0e0;
+
 $desktop-view: 460px;
 
 a,
@@ -71,10 +72,10 @@ html {
             @media only screen and (min-width: $desktop-view) {
               font-size: 1em;
             }
-          }
-          .btn:hover {
-            background-color: $grey;
-            color: $dark-green;
+            &:hover {
+              background-color: $grey;
+              color: $dark-green;
+            }
           }
           .btn.active {
             background-color: $dark-green;
@@ -110,15 +111,15 @@ html {
                   width: 30px;
                 }
               }
-            }
-            td:nth-child(2) {
-              @media only screen and (min-width: $desktop-view) {
-                text-align: left;
+              &:nth-child(2) {
+                @media only screen and (min-width: $desktop-view) {
+                  text-align: left;
+                }
               }
             }
-          }
-          tbody tr:nth-child(odd) {
-            background-color: $white;
+            &:nth-child(odd) {
+              background-color: $white;
+            }
           }
         }
       }
