@@ -17,7 +17,7 @@ My project for the [Build a Camper Leaderboard challenge](https://www.freecodeca
 * [Bootstrap](https://getbootstrap.com)
 * [axios](https://github.com/axios/axios)
 * [React-Bootstrap](https://react-bootstrap.github.io)
-* [Font Awesome](http://fontawesome.io)
+* [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
 
 ## Demo
