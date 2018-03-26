@@ -31,11 +31,11 @@ export default class App extends Component {
           thirtyDays: thirtyDays.data,
           allTime: allTime.data
         });
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('success').style.display = 'block';
+        document.querySelector('.spinner').style.display = 'none';
+        document.querySelector('.success').style.display = 'block';
       })).catch((error) => {
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('error').style.display = 'block';
+        document.querySelector('.spinner').style.display = 'none';
+        document.querySelector('.error').style.display = 'block';
       });
   }
 
@@ -46,7 +46,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div id="success">
+        <div className="success">
           <header className="text-center">
             <h1>
               <img src={freeCodeCampLogo} alt="freeCodeCamp" />
@@ -69,11 +69,11 @@ export default class App extends Component {
           </main>
           <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
         </div>
-        <div className="text-center" id="spinner">
+        <div className="text-center spinner">
           <span className="fa fa-refresh fa-spin fa-fw"></span>
           <span className="sr-only">Loading...</span>
         </div>
-        <div className="alert alert-warning text-center" id="error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
+        <div className="alert alert-warning text-center error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
       </div>
     );
   }
