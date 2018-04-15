@@ -20,42 +20,46 @@ a:focus {
 html {
   height: 100%;
   body {
-    background-color: $dark-green;
-    color: $white;
+    background-color: $white;
+    color: $dark-green;
     font-family: Lato, sans-serif;
     font-size: 0.92rem;
     letter-spacing: 2px;
     min-height: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     position: relative;
     @media only screen and (min-width: $desktop-view) {
       font-size: 1.4rem;
     }
     .success {
       display: none;
-      header {
-        margin: 30px 0 40px;
-        h1 img {
-          width: 24rem;
-          @media only screen and (min-width: $desktop-view) {
-            width: 30rem;
-          }
-        }
-        h2 {
-          font-size: 2rem;
-          @media only screen and (min-width: $desktop-view) {
-            font-size: 2.4rem;
+      .navbar {
+        background-color: $dark-green;
+        border-bottom: 0;
+        .container {
+          padding: 0 15px;
+          width: 100%;
+          h1 {
+            margin: 0;
+            img {
+              width: 16rem;
+              @media only screen and (min-width: $desktop-view) {
+                width: 20rem;
+              }
+            }
           }
         }
       }
-      .well {
-        background-color: $white;
-        border: none;
-        border-radius: 0;
-        color: $black;
-        margin-top: 20px;
-        max-width: 900px;
-        padding: 10px;
+      h2 {
+        font-size: 2rem;
+        margin-top: 100px;
+        @media only screen and (min-width: $desktop-view) {
+          font-size: 2.4rem;
+        }
+      }
+      main {
+        margin: 30px auto 0;
+        max-width: 800px;
         legend {
           border: none !important;
           margin: 0;
@@ -68,7 +72,7 @@ html {
           .btn:focus {
             background-color: $white;
             border: 1px solid $dark-green;
-            border-radius: 0;
+            border-radius: 4px;
             color: $dark-green;
             font-size: 0.92rem;
             letter-spacing: 2px;
@@ -127,7 +131,6 @@ html {
         }
       }
       footer {
-        background-color: $grey;
         bottom: 0;
         color: $black;
         font-size: 1.2rem;

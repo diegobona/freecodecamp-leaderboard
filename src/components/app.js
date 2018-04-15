@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LeaderboardList from './leaderboard-list';
 import axios from 'axios';
-import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 const freeCodeCampLogo = require('.././images/freecodecamp-logo.png');
 
@@ -45,16 +45,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="body">
         <div className="success">
-          <header className="text-center">
+          <Navbar fixedTop>
             <h1>
               <img src={freeCodeCampLogo} alt="freeCodeCamp" />
             </h1>
-            <h2><span className="fa fa-trophy"></span> Leaderboard</h2>
-          </header>
-          <main>
-            <div className="well center-block">
+          </Navbar>
+          <h2 className="text-center"><span className="fa fa-trophy"></span> Leaderboard</h2>
+          <div className="container-fluid">
+            <main>
               <form>
                 <fieldset>
                   <legend aria-label="Show top 100 campers for"></legend>
@@ -65,15 +65,15 @@ export default class App extends Component {
                 </fieldset>
               </form>
               <LeaderboardList campers={this.state[this.state.currentView]} />
-            </div>
-          </main>
-          <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+            </main>
+            <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
+          </div>
+          <div className="text-center spinner">
+            <span className="fa fa-refresh fa-spin fa-fw"></span>
+            <span className="sr-only">Loading...</span>
+          </div>
+          <div className="alert alert-warning text-center error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
         </div>
-        <div className="text-center spinner">
-          <span className="fa fa-refresh fa-spin fa-fw"></span>
-          <span className="sr-only">Loading...</span>
-        </div>
-        <div className="alert alert-warning text-center error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
       </div>
     );
   }
