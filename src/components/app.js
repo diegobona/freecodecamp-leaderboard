@@ -46,6 +46,13 @@ export default class App extends Component {
   render() {
     return (
       <div className="body">
+        <div className="text-center spinner">
+          <span className="fa fa-refresh fa-spin fa-fw"></span>
+          <span className="sr-only">Loading...</span>
+        </div>
+        <div className="container error">
+          <div className="alert alert-warning text-center"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
+        </div>
         <div className="success">
           <Navbar fixedTop>
             <h1>
@@ -68,11 +75,6 @@ export default class App extends Component {
             </main>
             <footer className="text-center">Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
           </div>
-          <div className="text-center spinner">
-            <span className="fa fa-refresh fa-spin fa-fw"></span>
-            <span className="sr-only">Loading...</span>
-          </div>
-          <div className="alert alert-warning text-center error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
         </div>
       </div>
     );
