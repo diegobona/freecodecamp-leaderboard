@@ -1,13 +1,8 @@
 # Free Code Camp Leaderboard
 
-My project for the [Build a Camper Leaderboard challenge](https://www.freecodecamp.org/challenges/build-a-camper-leaderboard) as part of the curriculum for the Data Visualization Certification on [Free Code Camp](https://www.freecodecamp.org).
+My project for the [Build a Camper Leaderboard challenge](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-camper-leaderboard) as part of the curriculum for Coding Interview Take Home Projects on [Free Code Camp](https://www.freecodecamp.org).
 
 ---
-
-## User Stories
-1. I can see a table of the freeCodeCamp campers who've earned the most brownie points in the past 30 days.
-2. I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
-3. I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
 
 ## Built With
 * [React](https://reactjs.org)

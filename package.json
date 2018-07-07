@@ -1,7 +1,7 @@
 {
   "name": "freecodecamp-leaderboard",
   "version": "1.0.0",
-  "description": "My project for the Build a Camper Leaderboard challenge as part of the curriculum for the Data Visualization Certification on Free Code Camp.",
+  "description": "My project for the Build a Camper Leaderboard challenge as part of the curriculum for Coding Interview Take Home Projects on Free Code Camp.",
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
