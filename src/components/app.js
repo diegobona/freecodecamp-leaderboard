@@ -51,7 +51,7 @@ export default class App extends Component {
           <span className="sr-only">Loading...</span>
         </div>
         <div className="container error">
-          <div className="alert alert-warning text-center"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
+          <div className="alert alert-danger text-center"><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
         </div>
         <div className="success">
           <Navbar fixedTop>
