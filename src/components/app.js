@@ -12,7 +12,10 @@ export default class App extends Component {
     this.state = {
       thirtyDays: [],
       allTime: [],
-      currentView: 'thirtyDays'
+      currentView: 'thirtyDays',
+      spinnerStyle: {display: 'block'},
+      successStyle: {display: 'none'},
+      errorStyle: {display: 'none'}
     };
   }
 
@@ -29,13 +32,15 @@ export default class App extends Component {
       .then(axios.spread((thirtyDays, allTime) => {
         this.setState({
           thirtyDays: thirtyDays.data,
-          allTime: allTime.data
+          allTime: allTime.data,
+          spinnerStyle: {display: 'none'},
+          successStyle: {display: 'block'}
         });
-        document.querySelector('.spinner').style.display = 'none';
-        document.querySelector('.success').style.display = 'block';
       })).catch((error) => {
-        document.querySelector('.spinner').style.display = 'none';
-        document.querySelector('.error').style.display = 'block';
+        this.setState({
+          spinnerStyle: {display: 'none'},
+          errorStyle:{display: 'block'}
+        });
       });
   }
 
@@ -46,14 +51,14 @@ export default class App extends Component {
   render() {
     return (
       <div className="body">
-        <div className="text-center spinner">
+        <div className="text-center spinner" style={this.state.spinnerStyle}>
           <span className="fa fa-refresh fa-spin fa-fw"></span>
           <span className="sr-only">Loading...</span>
         </div>
-        <div className="container error">
+        <div className="container error" style={this.state.errorStyle}>
           <div className="alert alert-danger text-center"><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load Free Code Camp leaderboard.</div>
         </div>
-        <div className="success">
+        <div className="success" style={this.state.successStyle}>
           <Navbar fixedTop>
             <h1>
               <img src={freeCodeCampLogo} alt="freeCodeCamp" />

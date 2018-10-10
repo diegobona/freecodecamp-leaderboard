@@ -36,120 +36,116 @@ html {
       margin-top: 20%;
     }
     .error {
-      display: none;
       margin-top: 20%;
     }
-    .success {
-      display: none;
-      .navbar {
-        background-color: $dark-green;
-        border-bottom: 0;
-        .container {
-          padding: 0 15px;
-          width: 100%;
-          h1 {
-            margin: 0;
-            img {
-              width: 16rem;
-              @media only screen and (min-width: $desktop-view) {
-                width: 20rem;
-              }
-            }
-          }
-        }
-      }
-      h2 {
-        font-size: 2rem;
-        margin-top: 100px;
-        @media only screen and (min-width: $desktop-view) {
-          font-size: 2.4rem;
-        }
-      }
-      main {
-        margin: 30px auto 0;
-        max-width: 800px;
-        legend {
-          border: none !important;
-          margin: 0;
-        }
-        .btn-group {
-          float: right;
-          margin-bottom: 15px;
-          .btn,
-          .btn:active,
-          .btn:focus {
-            background-color: $white;
-            border: 1px solid $dark-green;
-            border-radius: 4px;
-            color: $dark-green;
-            font-size: 0.92rem;
-            letter-spacing: 2px;
-            @media only screen and (min-width: $desktop-view) {
-              font-size: 1em;
-            }
-            &:hover {
-              background-color: $grey;
-              color: $dark-green;
-            }
-          }
-          .btn.active {
-            background-color: $dark-green;
-            color: $white;
-          }
-        }
-        .table {
-          border: none;
-          color: $black;
-          margin-bottom: 0;
-          thead {
-            background-color: $dark-green;
-            color: $white;
-            position: relative;
-            tr th {
-              border: none !important;
-              text-align: center;
-              vertical-align: middle;
-            }
-          }
-          tbody tr {
-            background-color: $grey;
-            td {
-              text-align: center;
-              vertical-align: middle;
-              img {
-                display: none;
-                border: 1px solid $dark-green;
-                margin-right: 10px;
-                width: 20px;
-                @media only screen and (min-width: $desktop-view) {
-                  display: inline-block;
-                  width: 30px;
-                }
-              }
-              &:nth-child(2) {
-                @media only screen and (min-width: $desktop-view) {
-                  text-align: left;
-                }
-              }
-            }
-            &:nth-child(odd) {
-              background-color: $white;
-            }
-          }
-        }
-      }
-      footer {
-        bottom: 0;
-        color: $black;
-        font-size: 1.2rem;
-        left: 0;
-        letter-spacing: 2px;
-        margin: 0;
-        padding: 12px 0;
-        position: absolute;
-        right: 0;
+    .navbar {
+      background-color: $dark-green;
+      border-bottom: 0;
+      .container {
+        padding: 0 15px;
         width: 100%;
+        h1 {
+          margin: 0;
+          img {
+            width: 16rem;
+            @media only screen and (min-width: $desktop-view) {
+              width: 20rem;
+            }
+          }
+        }
       }
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 100px;
+      @media only screen and (min-width: $desktop-view) {
+        font-size: 2.4rem;
+      }
+    }
+    main {
+      margin: 30px auto 0;
+      max-width: 800px;
+      legend {
+        border: none !important;
+        margin: 0;
+      }
+      .btn-group {
+        float: right;
+        margin-bottom: 15px;
+        .btn,
+        .btn:active,
+        .btn:focus {
+          background-color: $white;
+          border: 1px solid $dark-green;
+          border-radius: 4px;
+          color: $dark-green;
+          font-size: 0.92rem;
+          letter-spacing: 2px;
+          @media only screen and (min-width: $desktop-view) {
+            font-size: 1em;
+          }
+          &:hover {
+            background-color: $grey;
+            color: $dark-green;
+          }
+        }
+        .btn.active {
+          background-color: $dark-green;
+          color: $white;
+        }
+      }
+      .table {
+        border: none;
+        color: $black;
+        margin-bottom: 0;
+        thead {
+          background-color: $dark-green;
+          color: $white;
+          position: relative;
+          tr th {
+            border: none !important;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+        tbody tr {
+          background-color: $grey;
+          td {
+            text-align: center;
+            vertical-align: middle;
+            img {
+              display: none;
+              border: 1px solid $dark-green;
+              margin-right: 10px;
+              width: 20px;
+              @media only screen and (min-width: $desktop-view) {
+                display: inline-block;
+                width: 30px;
+              }
+            }
+            &:nth-child(2) {
+              @media only screen and (min-width: $desktop-view) {
+                text-align: left;
+              }
+            }
+          }
+          &:nth-child(odd) {
+            background-color: $white;
+          }
+        }
+      }
+    }
+    footer {
+      bottom: 0;
+      color: $black;
+      font-size: 1.2rem;
+      left: 0;
+      letter-spacing: 2px;
+      margin: 0;
+      padding: 12px 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
     }
   }
 }
